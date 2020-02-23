@@ -82,34 +82,41 @@
             </div>
         </div>
     </section>
-    <section class="border rounded-0 download-section content-section text-center" id="impacto" style="background-color: rgba(255,255,255,0.9);color: rgb(0,0,0);padding: 40px 0px;">
+    <section class="border rounded-0 download-section content-section text-center" id="impacto" style="background-color: rgba(255,255,255,0.9);color: rgb(0,0,0);padding: 30px 0px;">
         <div class="container">
             <div class="row">
                 <div class="col" style="padding: 0px;">
                     <p class="text-center d-inline-block float-none" style="margin: 0px;width: 160px;">Datos Pais</p>
                 </div>
-                <div class="col-lg-8" style="width: 450px;padding: 0px;margin: 0px;margin-right: 0;margin-left: 0px;min-width: 450px;max-width: 600px;"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyCNtHjZuC5b3e76fPeegrlEEHAh7vGahgQ&amp;center=-5.5%2C-70.0&amp;zoom=3&amp;maptype=satellite" width="60%" height="400" style="width: 540px;"></iframe></div>
-                <div
-                    class="col" style="padding: 0px;">
-                    <p class="text-center d-inline-block float-none" style="margin: 0px;width: 160px;">Datos Globales</p>
+                <div class="col-lg-8" style="width: 450px;padding: 0px;margin: 0px;margin-right: 0;margin-left: 0px;min-width: 450px;max-width: 600px;"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed/v1/view?key=&amp;center=-5.5%2C-70.0&amp;zoom=3&amp;maptype=satellite" width="50%" height="350" style="width: 540px;"></iframe></div>
+                <div class="col" style="padding: 0px;">
+                    <p class="text-center d-inline-block float-none" style="margin: 0px;width: 160px; font-size: 100%;">Emigrantes por pais</p>
+                    <div style="overflow-y: scroll; height: 40%;">
+                        <svg id="barChar" height="200px" width=100% ></svg>        
+                    </div>
+                    <p class="text-center d-inline-block float-none" style="margin: 10px 0px 0px;width: 160px; font-size: 100%;">Total emigrantes</p>
+                    <svg id="lineChar" height="40%" width=100% style="margin: 0px 0px 0px;"></svg>
+                </div>
             </div>
-        </div>
-        <div class="row">
+        <div class="row" style="margin: 0px 0px 10px;">
             <div class="col">
-                <p id = "paragraphYear" style="margin: 0px 0px 10px;">Escoge un año y un pais para ver informacion sobre la migracion venezolana</p>
+                <p id = "paragraphYear" style="font-size: 110%;margin: 0px;">Escoge un año y un pais para ver informacion sobre la migracion venezolana</p>
+            </div>
+            <div class="col-xs-6">
+                <img id="imgYear" style="padding-bottom: 20;">
             </div>
         </div>
-        <div class="row" style="filter: brightness(70%);background-color: rgba(255,255,255,0.43);">
-            <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2010)">2010</button></div>
-            <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2011)">2011</button></div>
-            <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2012)">2012</button></div>
-            <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2013)">2013</button></div>
-            <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2014)">2014</button></div>
-            <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2015)">2015</button></div>
-            <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2016)">2016</button></div>
-            <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2017)">2017</button></div>
-            <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2018)">2018</button></div>
-        </div>
+            <div class="row" style="filter: brightness(70%);background-color: rgba(255,255,255,0.43);">
+                <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2010)">2010</button></div>
+                <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2011)">2011</button></div>
+                <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2012)">2012</button></div>
+                <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2013)">2013</button></div>
+                <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2014)">2014</button></div>
+                <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2015)">2015</button></div>
+                <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2016)">2016</button></div>
+                <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2017)">2017</button></div>
+                <div class="col"><button class="btn btn-outline-secondary text-uppercase" type="button" onclick="addText(2018)">2018</button></div>
+            </div>
         </div>
     </section>
     <footer>
@@ -117,8 +124,10 @@
             <p>Copyright ©&nbsp;Brand 2020</p>
         </div>
     </footer>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/mapInteraction.js"></script>
+    <script src="assets/js/mapGraphicsD3.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="assets/js/grayscale.js"></script>
