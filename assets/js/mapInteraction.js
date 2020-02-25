@@ -23,11 +23,11 @@ function addText(year){
             img = "assets/img/img2014.png";
             break;
         case 2015:
-            text = "<b>2015:</b> Las consecuencias de la caida del petroleo no se demoran llegar aumentando el desempleo y la inflacion en el pais en el pais. Continuan las protestas contra el gobierno de Maduro mientras la oposicion logra conseguir una victoria aplastante al partido de Maduro ganando la mayoria en la asamblea nacional."
+            text = "<b>2015:</b> Las consecuencias de la caida del petroleo no se demoran llegar aumentando la inflacion, el desempleoy el decontento en el pais. Continuan las protestas contra el gobierno de Maduro mientras la oposicion logra conseguir una victoria aplastante al partido de Maduro ganando una mayoria en la asamblea nacional."
             img = "assets/img/img2015.png";
             break;
-        case 2016:
-            text = "<b>2016:</b> La represion a las protestas continua generando mas victimas mientras el desempleo, la inflacion y el crimen aumentan. Maduro no permite quela nueva samblea en su oposicion se pocesione y desconoce su autoridad, esto aumenta las protestas mientras EEUU toma esto para imponer fuertes sanciones economicas al gobierno. "
+        case 2016:1
+            text = "<b>2016:</b> La represion a las protestas continua generando mas victimas mientras el desempleo, la inflacion y el crimen aumentan. Maduro no permite que la nueva samblea en su oposicion se pocesione y desconoce su autoridad, esto aumenta las protestas mientras EEUU toma esto para imponer fuertes sanciones economicas al gobierno. "
             img = "assets/img/img2016.png";
             break;
         case 2017:
@@ -35,7 +35,7 @@ function addText(year){
             img = "assets/img/img2017.png";
             break;
         case 2018:
-            text = "<b>2018:</b> Este es el año con la mayor migracion de Venezolanos fuera del Pais, la mayoria saliendo del pais sin rumbo fijo en busca de empleo, estabilidad y alejarse de la crisis que enfrenta su pais, casi todos salen por la frontera con Colombia generando la crisis de refugiados mas grande en la historia de Latinoamerica."
+            text = "<b>2018:</b> Este es el año con la mayor migracion de Venezolanos fuera del Pais, la mayoria saliendo sin un destino fijo en busca de empleo, estabilidad y alejarse de la crisis que enfrenta su pais, casi todos salen por la frontera con Colombia generando la crisis de refugiados mas grande en la historia de Latinoamerica."
             img = "assets/img/img2018.png";
             break;
     }

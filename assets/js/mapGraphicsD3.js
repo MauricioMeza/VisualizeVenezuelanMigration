@@ -48,7 +48,7 @@ function drawBarGraph(rawData){
     var format = x.tickFormat(20);
 
     svg.append("g")
-        .attr("fill", "steelblue")
+        .attr("fill", "DimGray")
     .selectAll("rect")
     .data(data)
     .join("rect")
@@ -107,7 +107,7 @@ function drawLineGraph(rawData){
 
     svg.append("path")
         .datum(data)
-        .attr("fill", "steelblue")
+        .attr("fill", "DimGray")
         .attr("d", area);
 
     svg.append("g")
