@@ -144,7 +144,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8" style="width: 400px;padding: 0px;margin: 0px;margin-right: 0;margin-left: 0px;max-width: 500px;">
-                    <iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyCNtHjZuC5b3e76fPeegrlEEHAh7vGahgQ&amp;center=-5.5%2C-70.0&amp;zoom=3&amp;maptype=roadmap" width="90%" height="98%"></iframe>
+                        <div id="googleMapContainer" style="width:98%; height:calc(95% - 0px);"></div>
                 </div>
                 <div class="col" style="padding: 0px;">
                     <p class="text-center d-inline-block float-none" style="margin: 0px;width: 160px; font-size: 100%;">Emigrantes por pais</p>
@@ -183,12 +183,14 @@
     </footer>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/mapInteraction.js"></script>
+    <script src="assets/js/mapConfig.js"></script>
     <script src="assets/js/mapInteraction.js"></script>
     <script src="assets/js/mapGraphicsD3.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="assets/js/grayscale.js"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB63_2wCGLLuvMadVGTh8oaaPKIcH67sBs&libraries=visualization,geometry&callback=onGoogleMapResponse"></script>
 </body>
 
 </html>
