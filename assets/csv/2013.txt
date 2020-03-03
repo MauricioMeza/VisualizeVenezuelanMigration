@@ -1,0 +1,64 @@
+pais,v2018
+Albania,0
+Argentina,5
+Aruba,0
+Australia,10
+Austria,0
+Belgium,1
+Bolivia (Plurinational State of),1
+Brazil,23
+Bulgaria,0
+Canada,942
+Chile,2
+China,0
+Hong Kong SAR,0
+Colombia,31
+Costa Rica,237
+Curacao,1
+Cyprus,0
+Czech Rep.,0
+Denmark,0
+Dominican Rep.,0
+Ecuador,13
+Estonia,0
+Finland,5
+Francia,21
+Germany,16
+Greece,5
+Guatemala,0
+Guyana,0
+Honduras,1
+Iceland,0
+Ireland,1
+Israel,0
+Italy,13
+Jordan,1
+Latvia,0
+Lebanon,0
+Luxembourg,0
+Malta,0
+Mexico,14
+Morocco,0
+Netherlands,0
+New Zealand,0
+Nicaragua,0
+Norway,0
+Panama,22
+Paraguay,0
+Peru,21
+Poland,0
+Portugal,0
+Rep. of Korea,0
+Romania,0
+Russian Federation,0
+South Africa,0
+Spain,63
+Suriname,0
+Sweden,11
+Switzerland,4
+Trinidad and Tobago,0
+Ukraine,1
+UK,25
+USA,8060
+Uruguay,2
+Venezuela (Bolivarian Republic of),0
