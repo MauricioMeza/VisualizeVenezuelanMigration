@@ -124,16 +124,70 @@ function addText(year){
 
     parrafo.fadeOut(function(){
         parrafo.html(text)
-        parrafo.fadeIn()
+        parrafo.fadeIn("fast")
     });
 
     imagen.fadeOut(function(){
         imagen.attr("src", img)
         imagen.attr("height", "100px")
         imagen.attr("width","100px")
-        imagen.fadeIn()
+        imagen.fadeIn("fast")
     });
 
     drawBarGraph(data)
     drawLineGraph(data2, year)
+}
+
+function changeCountries(num){
+    changeCountryInfo(countryData[num],2017)
+}
+
+function changeCountryInfo(countryData , year){
+    yearV = year-2010
+    var name = $("#countryName"); 
+    var flag = $("#countryFlag"); 
+    var capital = $("#countryCapt");
+    var language = $("#countryLang");
+    var distance = $("#countryDist");
+    var migrants = $("#countryMigr");
+    var population = $("#countryPopl");
+    var poprelation =$("#countryPopr");
+
+    
+    flag.fadeOut(function(){
+        flag.attr("src", countryData.flag)
+        flag.attr("width","25%")
+        flag.attr("height", "auto")
+        flag.fadeIn("fast")
+    });
+    name.fadeOut(function(){
+        name.html(countryData.name)
+        name.fadeIn("fast")
+    });
+    capital.fadeOut(function(){
+        console.log("gonorrea")
+        capital.html(countryData.capital)
+        capital.fadeIn("fast")
+    });
+    language.fadeOut(function(){
+        language.html(countryData.language)
+        language.fadeIn("fast")
+    });
+    distance.fadeOut(function(){
+        distance.html(countryData.distance)
+        distance.fadeIn("fast")
+    });
+    migrants.fadeOut(function(){
+        migrants.html(countryData.year_value[7][1])
+        migrants.fadeIn("fast")
+    });
+    population.fadeOut(function(){
+        population.html(countryData.population)
+        population.fadeIn("fast")
+    });
+    poprelation.fadeOut(function(){
+        poprelation.html(countryData.year_value[7][1])
+        poprelation.fadeIn("fast")
+    });
+      
 }

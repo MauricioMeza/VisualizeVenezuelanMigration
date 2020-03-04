@@ -172,8 +172,8 @@ Year,Country / territory of asylum/residence,Origin,Population type,Value
 2018,Chile,Venezuela (Bolivarian Republic of),Asylum-seekers,3102
 2018,Chile,Venezuela (Bolivarian Republic of),Others of concern,285122
 2018,Chile,Venezuela (Bolivarian Republic of),Refugees (incl. refugee-like situations),9
-2014,"China, Hong Kong SAR",Venezuela (Bolivarian Republic of),Asylum-seekers,1
-2015,"China, Hong Kong SAR",Venezuela (Bolivarian Republic of),Asylum-seekers,1
+"2014,""China, Hong Kong SAR"",Venezuela (Bolivarian Republic of),Asylum-seekers,1"
+"2015,""China, Hong Kong SAR"",Venezuela (Bolivarian Republic of),Asylum-seekers,1"
 2003,Colombia,Venezuela (Bolivarian Republic of),Refugees (incl. refugee-like situations),3
 2003,Colombia,Venezuela (Bolivarian Republic of),Asylum-seekers,5
 2004,Colombia,Venezuela (Bolivarian Republic of),Refugees (incl. refugee-like situations),9
@@ -258,11 +258,11 @@ Year,Country / territory of asylum/residence,Origin,Population type,Value
 2016,Denmark,Venezuela (Bolivarian Republic of),Asylum-seekers,5
 2017,Denmark,Venezuela (Bolivarian Republic of),Asylum-seekers,12
 2018,Denmark,Venezuela (Bolivarian Republic of),Asylum-seekers,21
-2015,Dominican Rep.,Venezuela (Bolivarian Republic of),Asylum-seekers,1
-2016,Dominican Rep.,Venezuela (Bolivarian Republic of),Asylum-seekers,20
-2017,Dominican Rep.,Venezuela (Bolivarian Republic of),Asylum-seekers,50
-2018,Dominican Rep.,Venezuela (Bolivarian Republic of),Asylum-seekers,72
-2018,Dominican Rep.,Venezuela (Bolivarian Republic of),Others of concern,26428
+2015,Dominican Rep,Venezuela (Bolivarian Republic of),Asylum-seekers,1
+2016,Dominican Rep,Venezuela (Bolivarian Republic of),Asylum-seekers,20
+2017,Dominican Rep,Venezuela (Bolivarian Republic of),Asylum-seekers,50
+2018,Dominican Rep,Venezuela (Bolivarian Republic of),Asylum-seekers,72
+2018,Dominican Rep,Venezuela (Bolivarian Republic of),Others of concern,26428
 2002,Ecuador,Venezuela (Bolivarian Republic of),Asylum-seekers,1
 2004,Ecuador,Venezuela (Bolivarian Republic of),Asylum-seekers,1
 2005,Ecuador,Venezuela (Bolivarian Republic of),Asylum-seekers,2

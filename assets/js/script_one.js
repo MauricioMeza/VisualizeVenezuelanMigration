@@ -1,18 +1,15 @@
 //Obtener datos por pais++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-function get_data_by_country(){
-    get_country($("#tx1").val(), "p1")
-}
-
+var countryObjList = []
+var countryObjJson = "" 
 //Obtener objeto pais
-function get_country(country_name, id){
+function get_country(country_name){
     //Cargar datos del csv
-    d3.csv("/Scripts_Datos/data.csv", conversor, function(data){
+    d3.csv("data.csv", conversor).then(function(data){
         country_obj = country(data,country_name);
-        $("#"+id).html(country_obj.toString())
-
+        countryObjList.push(country_obj)
+        countryObjJson += JSON.stringify(country_obj)+", \n"
+        console.log(countryObjJson)
     });
-
 }
 
 //Convertir datos numericos en enteros
@@ -24,7 +21,6 @@ function conversor(d){
 
 //Buscar valores anuales por pais
 function country(data, country_name){
-
     var country_obj = new Country(country_name)
     //i : data
     //j : object
@@ -40,8 +36,6 @@ function country(data, country_name){
             }
         }
     }
-    console.log(country_obj);
-
     return country_obj;
 }
 
@@ -49,19 +43,30 @@ function country(data, country_name){
 class Country {
     constructor(name){
         this.name = name;
+        this.capital = "";
+        this.distance = 0;
+        this.flag = "generic_country.png";
+        this.population = 0;
+        this.poPer = [];
         this.year_value = [];
         for (var i = 2010 ; i < 2019 ;i ++ ){
             this.year_value.push([i,0])
+            this.poPer.push([i,0])
         }
     }
 
-    toString(){
-        var values = "";
-        for(var i = 0; i < this.year_value.length; i ++){
-            values = values.concat("<br>"+this.year_value[i][0]+" : "+this.year_value[i][1]);  
+    toJson(){
+        return{
+            name: this.name,
+            nombre: this.nombre,
+            capital: this.capital,
+            distance: this.distace,
+            flag: this.flag,
+            population: this.population,
+            yearValue: this.year_value,
+            poPer: this.poPer
+            };
         }
-        return this.name + values;
-    }
 }
 
 
@@ -105,14 +110,6 @@ function select_year(data, year){
             year_obj.countries.push([current_country,0])
         }//Si el pais es el mismo pero el año es incorrecto, no hacer nada
     }
-    
-    var count = 0
-
-    year_obj.countries.forEach(function(f){
-        count += f[1]
-    })
-    console.log(count)
-
     return year_obj;
 }
 

@@ -1,5 +1,6 @@
 //BARCHA
-
+addText(2010)
+changeCountries(5)
 
 function drawBarGraph(csvRef){
     d3.selectAll("svg > *").remove()  
