@@ -1,6 +1,10 @@
+// Cambio de año en la interaccion ----------------------------
 function addText(year){
-    var text, img, data, data2; 
-
+    var text, img, data, data2;
+    window.currentState = new State(year, window.currentState.country)
+    console.log(window.currentState)
+    updateCountryInfo(window.currentState.country, year)
+    
     switch(year){
         case 2010:
             text = "<b>2010:</b> Hugo chavez lleva 8 años en el gobierno de la Revolucion Bolivariana. Algunos venezolanos opuestos a esta habian salido del pais durante la anterior decada principalmente a destinos como Europa y EEUU. A finales de año su partido pierde la mayoria en el senado y la oposicion al Chavez comienza a tomar fuerza."
@@ -103,8 +107,8 @@ function addText(year){
                     2018,3078183`;
             break;
         case 2019:
-            text = "<b>2019:</b> Este es el año con la mayor migracion de Venezolanos fuera del Pais, la mayoria saliendo sin un destino fijo en busca de empleo, estabilidad y alejarse de la crisis que enfrenta su pais, casi todos salen por la frontera con Colombia generando la crisis de refugiados mas grande en la historia de Latinoamerica."
-            img = "assets/img/img2017.png";
+            text = "<b>2019:</b> La asamblea nacional no reconoce a Maduro y nombra a Juan Guaido como presidente, este es reconocido por muchos países liderados por EEUU lo cual impulsa más protestas en el país, Guaido incentiva a las Fuerzas Armadas a seguir sus ordenes. Sin embargo Maduro logra mantener su lealtad y con esto un firme control sobre el país."
+            img = "assets/img/img2019.png";
             data = "assets/csv/2019.txt";
             data2 = `y,cantidad
                     2010,7329
@@ -133,13 +137,17 @@ function addText(year){
         imagen.attr("width","100px")
         imagen.fadeIn("fast")
     });
-
+    
     drawBarGraph(data)
     drawLineGraph(data2, year)
 }
 
+// Cambio de pais en la tabla de info ----------------------------
+
 function changeCountries(num){
-    changeCountryInfo(countryData[num],2017)
+    window.currentState = new State(window.currentState.year, num)
+    console.log(window.currentState)
+    changeCountryInfo(window.countryData[num], window.currentState.year)
 }
 
 function changeCountryInfo(countryData , year){
@@ -165,7 +173,6 @@ function changeCountryInfo(countryData , year){
         name.fadeIn("fast")
     });
     capital.fadeOut(function(){
-        console.log("gonorrea")
         capital.html(countryData.capital)
         capital.fadeIn("fast")
     });
@@ -178,7 +185,7 @@ function changeCountryInfo(countryData , year){
         distance.fadeIn("fast")
     });
     migrants.fadeOut(function(){
-        migrants.html(countryData.year_value[7][1])
+        migrants.html(countryData.year_value[yearV][1])
         migrants.fadeIn("fast")
     });
     population.fadeOut(function(){
@@ -186,8 +193,31 @@ function changeCountryInfo(countryData , year){
         population.fadeIn("fast")
     });
     poprelation.fadeOut(function(){
-        poprelation.html(countryData.year_value[7][1])
+        poprelation.html(countryData.poPer[yearV][1] + " %")
+        poprelation.fadeIn("fast")
+    }); 
+}
+
+function updateCountryInfo(c ,year){
+    yearV = year-2010
+    console.log(window.countryData[c])
+    var migrants = $("#countryMigr");
+    var poprelation =$("#countryPopr");
+
+    poprelation.fadeOut(function(){
+        poprelation.html(window.countryData[c].poPer[yearV][1] + " %")
         poprelation.fadeIn("fast")
     });
-      
+    migrants.fadeOut(function(){
+        migrants.html(window.countryData[c].year_value[yearV][1])
+        migrants.fadeIn("fast")
+    });
+}
+
+function fillPoper(data){
+    data.forEach(function(f){
+        for(var i=0; i<10; i++){
+            f.poPer[i][1] = ((f.year_value[i][1]/f.population)*100).toPrecision(2) 
+        }
+    })    
 }

@@ -1,7 +1,4 @@
 //BARCHA
-addText(2010)
-changeCountries(5)
-
 function drawBarGraph(csvRef){
     d3.selectAll("svg > *").remove()  
     var svg = d3.select("#barChar")
@@ -138,17 +135,5 @@ function drawLineGraph(rawData, ano){
     svg.append("g")
         .call(yAxis);
 }
-
-var rawData2 = `y,cantidad
-2010,7329
-2011,8150
-2012,8707
-2013,9552
-2014,12831
-2015,22548
-2016,52626
-2017,502806
-2018,3078183
-2019,4610443`;
 
 
