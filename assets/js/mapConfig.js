@@ -193,4 +193,22 @@ function onGoogleMapResponse() {
             }
           ]
     });
+    map.data.addGeoJson(geoJsonMid)
+
+    map.data.addListener('mouseover', function(event) {
+      map.data.revertStyle();
+      map.data.overrideStyle(event.feature, {fillColor: 'grey'});
+      var nombre = event.feature.getProperty('name')
+      var numero
+      for(var i=0; i<window.countryData.length; i++){
+        if(window.countryData[i].name == nombre){
+          numero = window.countryData[i].k
+          changeCountries(numero)
+        }
+      }
+      map.data.addListener('mouseout', function(event) {
+        map.data.revertStyle();
+      });
+      
+   });
 }

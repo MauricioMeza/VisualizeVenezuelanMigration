@@ -146,7 +146,6 @@ function addText(year){
 
 function changeCountries(num){
     window.currentState = new State(window.currentState.year, num)
-    console.log(window.currentState)
     changeCountryInfo(window.countryData[num], window.currentState.year)
 }
 

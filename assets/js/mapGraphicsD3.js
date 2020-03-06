@@ -134,6 +134,56 @@ function drawLineGraph(rawData, ano){
 
     svg.append("g")
         .call(yAxis);
+
+
+        if(ano<2014){
+            svg.append("g")
+            .attr("fill", "black")
+            .attr("text-anchor", "end")
+            .style("font", "15px sans-serif")
+            .selectAll("text")
+            .data(data)
+            .join("text")
+                .attr("x", "60%")
+                .attr("y", "40%")
+                .attr("dy", "0.35em")
+                .text(d3.max(data, function(d){return d.value}));
+        }else{
+            var fuckItWellDoItLive
+            switch(ano){
+                case 2014:
+                    fuckItWellDoItLive = "12.831"
+                    break;
+                case 2015:
+                    fuckItWellDoItLive = "22.548"
+                    break;
+                case 2016:
+                    fuckItWellDoItLive = "52.626"
+                    break;
+                case 2017:
+                    fuckItWellDoItLive = "502.806"
+                    break;
+                case 2018:
+                    fuckItWellDoItLive = "3.078.183"
+                    break;
+                case 2019:
+                    fuckItWellDoItLive = "4.610.443"
+                    break;
+            }
+            svg.append("g")
+            .attr("fill", "black")
+            .attr("text-anchor", "end")
+            .style("font", "15px sans-serif")
+            .selectAll("text")
+            .data(data)
+            .join("text")
+                .attr("x", "60%")
+                .attr("y", "40%")
+                .attr("dy", "0.35em")
+                .text(fuckItWellDoItLive);
+        }
+    
+
 }
 
 
